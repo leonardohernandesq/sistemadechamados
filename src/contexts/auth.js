@@ -51,7 +51,6 @@ function AuthProvider({ children }) {
                     })
             })
             .catch((error) => {
-                console.log(error);
                 toast.error('Ops, Algo deu errado');
                 setLoadingAuth(false);
             })
@@ -91,7 +90,6 @@ function AuthProvider({ children }) {
 
             })
             .catch((error) => {
-                console.log(error)
                 toast.error('Ops, Algo deu errado')
                 setLoadingAuth(false)
             })

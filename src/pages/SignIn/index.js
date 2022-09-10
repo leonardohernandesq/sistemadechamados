@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react'
 import { AuthContext } from '../../contexts/auth';
 import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
+import { toast } from 'react-toastify';
 
 function SignIn() {
 
@@ -16,6 +17,8 @@ function SignIn() {
 
         if (email !== '' && password !== '') {
             Logar(email, password);
+        } else {
+            toast.error('Digite login e senha para logar!!!')
         }
     }
 
