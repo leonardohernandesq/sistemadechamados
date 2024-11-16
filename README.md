@@ -1,70 +1,110 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HelpDesk System
 
-## Available Scripts
+![HelpDesk Screenshot](image-readme.png)
 
-In the project directory, you can run:
+## Overview
+**HelpDesk System** is a simple web application designed to manage customer support tickets. You can submit new and edit support requests e edit status of their tickets. Built with **React** for a dynamic user experience and **Firebase** for data storage.
 
-### `npm start`
+## Features
+- Submit new support tickets with titles and descriptions.
+- View the list of submitted tickets and their current status.
+- updates for ticket statuses using **Firebase**.
+- Easy navigation and user-friendly interface.
+- Responsive design for optimal viewing on all devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
+<table align="left" height="255px">
+  <tr>
+    <td align="center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/">
+        <img src="https://skillicons.dev/icons?i=html" width="65px" alt="HTML5 icon"/><br/>
+        <sub>
+          <b>
+            <pre>HTML5</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/">
+        <img src="https://skillicons.dev/icons?i=css" width="65px" alt="CSS3 icon"/><br/>
+        <sub>
+          <b>
+            <pre>CSS3</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/">
+        <img src="https://skillicons.dev/icons?i=js" width="65px" alt="Javascript icon"/><br/>
+        <sub>
+          <b>
+            <pre>Javascript</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://react.dev/">
+        <img src="https://skillicons.dev/icons?i=react" width="65px" alt="React icon"/><br/>
+        <sub>
+          <b>
+            <pre>React</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://firebase.google.com/">
+        <img src="https://skillicons.dev/icons?i=firebase" width="65px" alt="Firebase icon"/><br/>
+        <sub>
+          <b>
+            <pre>Firebase</pre>
+          </b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+Follow these steps to set up and run the HelpDesk System locally:
 
-### `npm test`
+1. Clone the repository:
+   git clone https://github.com/leonardohernandesq/sistemadechamados
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install the dependencies:
+   npm install
 
-### `npm run build`
+3. Set up Firebase:
+   - Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+   - Add your Firebase configuration to the project. (Replace the `firebase-config.js` with your Firebase credentials).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the development server:
+   npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   The app will be available at http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Firebase Setup
+To integrate Firebase with this project, you need to set up Firebase for storing and managing the support tickets. Here are the steps:
 
-### `npm run eject`
+1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
+2. Set up Firebase Firestore and Firebase Authentication.
+3. Create a `firebaseConnection.js` file in the `services` directory with your Firebase project credentials:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```javascript
+// Your Firebase configuration
+const firebaseConfig = {
+  apiKey: "YOUR-API-KEY",
+  authDomain: "YOUR-PROJECT.firebaseapp.com",
+  projectId: "YOUR-PROJECT",
+  storageBucket: "YOUR-PROJECT.appspot.com",
+  messagingSenderId: "YOUR-SENDER-ID",
+  appId: "YOUR-APP-ID",
+};
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Visit the live site at [HelpDesk System](https://sistemadechamados.vercel.app/).
